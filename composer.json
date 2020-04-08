@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Core\\": "app/code/Core"
+    },
+    "psr-0": {
+      "": [
+        "app/",
+        "app/code/"
+      ]
+    }
+  }
+}

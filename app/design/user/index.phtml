@@ -1,0 +1,16 @@
+<div class="container">
+    <?php if (isset($this->user)) : ?>
+        <div class="jumbotron">
+            <h1>Hello, <?= $this->escapeHTML($this->user->firstname . " " . $this->user->lastname); ?>!</h1>
+            <p>Email: <?= $this->escapeHTML($this->user->email) ?></p>
+            <p>Gender: <?= $this->escapeHTML($this->user->gender) == 1 ? 'Male' : 'Female'?></p>
+            <p>Is Active: <?= $this->escapeHTML($this->user->is_active) ? 'Yes' : "No" ?></p>
+            <p>Created At: <?= $this->escapeHTML($this->user->created_at) ?></p>
+            <p>Updated At: <?= $this->escapeHTML($this->user->updated_at) ?></p>
+            <p>
+                <a class="btn btn-default btn-lg" href="<?= $this->makeURL("post/add"); ?>" role="button">Add New Post</a>
+                <a class="btn btn-primary btn-lg" href="<?= $this->makeURL("user/logout"); ?>" role="button">Logout</a>
+            </p>
+        </div>
+    <?php endif; ?>
+</div>
